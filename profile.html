@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body class="bg-main">
+    <div class="container">
+      <h2>User Profile</h2>
+
+      <img id="profileImage" class="profile-img" />
+
+      <div id="imageSection" class="hidden">
+        <label>Change Profile Image</label>
+        <div class="image-row">
+          <input type="file" id="editPhoto" accept=".jpg,.jpeg,.png" />
+          <button type="button" id="removePhoto" class="icon-btn">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </div>
+      </div>
+
+      <label>Name</label>
+      <input type="text" id="profileName" disabled />
+
+      <label>Email</label>
+      <input type="email" id="profileEmail" disabled />
+
+      <label>Phone</label>
+      <input type="tel" id="profilePhone" disabled />
+
+      <label>Password</label>
+      <div class="pass-wrap">
+        <input type="password" id="profilePassword" disabled />
+        <span class="toggle" onclick="togglePass('profilePassword')"
+          ><i class="fa-solid fa-eye"></i
+        ></span>
+      </div>
+
+      <p id="statusMsg" class="status"></p>
+
+      <button id="editBtn">Edit</button>
+      <button id="saveBtn" class="hidden">Save Changes</button>
+      <button class="logout" onclick="logout()">Logout</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

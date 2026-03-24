@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images\favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body class="bg-main">
+    <div class="container">
+      <h2>Create Account</h2>
+
+      <form id="registerForm">
+        <label>Name</label>
+        <input type="text" id="name" required />
+
+        <label>Profile Image (JPG/PNG)</label>
+        <input type="file" id="photo" accept=".jpg,.jpeg,.png" required />
+
+        <label>Email</label>
+        <input type="email" id="email" required />
+
+        <label>Phone</label>
+        <input type="tel" id="phone" required />
+
+        <label>Password</label>
+        <div class="pass-wrap">
+          <input type="password" id="password" required />
+          <span class="toggle" onclick="togglePass('password')"
+            ><i class="fa-solid fa-eye"></i
+          ></span>
+        </div>
+
+        <label>Confirm Password</label>
+        <div class="pass-wrap">
+          <input type="password" id="confirmPassword" required />
+          <span class="toggle" onclick="togglePass('confirmPassword')"
+            ><i class="fa-solid fa-eye"></i
+          ></span>
+        </div>
+        <p class="hint">Minimum 8 chars, 1 uppercase, 1 number, 1 symbol</p>
+
+        <button type="submit">Register</button>
+      </form>
+
+      <p>Already have account? <a href="login.html">Login</a></p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
