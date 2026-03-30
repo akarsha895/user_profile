@@ -1,6 +1,10 @@
 body {
-  font-family: "Segoe UI";
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 14px;
   margin: 0;
+}
+* {
+  box-sizing: border-box;
 }
 
 .bg-main {
@@ -14,6 +18,14 @@ body {
   background: white;
   border-radius: 12px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.page {
+  padding: 20px;
+}
+
+input {
+  color: black;
 }
 
 label {
@@ -110,4 +122,149 @@ button:hover {
 
 .image-row input[type="file"] {
   flex: 1;
+}
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #d25353;
+  padding: 12px 30px;
+  color: white;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.nav-links button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: auto;
+  padding: 8px 14px;
+  background: #9e3b3b;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.todo-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 25px 30px;
+  background: white;
+  border-radius: 12px;
+}
+
+.todo-input input {
+  flex: 1;
+  height: 42px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  color: black;
+}
+.todo-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.todo-input button {
+  width: 45px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+.todo-input button i {
+  font-size: 14px;
+}
+#searchInput {
+  margin-top: 15px;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.filters button {
+  width: auto;
+  padding: 6px 12px;
+  background: #f5afaf;
+  color: black;
+  border-radius: 20px;
+}
+
+.filters button.active {
+  background: #d25353;
+  color: white;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffead3;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.task-item span {
+  color: black;
+}
+
+.task-item span.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.task-actions button {
+  width: auto;
+  padding: 6px 10px;
+  margin-left: 5px;
+}
+
+input:focus {
+  border-color: #ea7b7b;
+  outline: none;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.edit-input {
+  width: 60%;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.hidden {
+  display: none;
 }
