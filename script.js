@@ -234,7 +234,7 @@ if (location.pathname.includes("todo.html")) {
   const email = localStorage.getItem("loggedInUser");
   const index = users.findIndex((u) => u.email === email);
   const user = users[index];
-
+  user.todos = user.todos || [];
   let filter = "all";
 
   window.addTask = function () {
@@ -250,11 +250,20 @@ if (location.pathname.includes("todo.html")) {
     saveUsers(users);
 
     input.value = "";
+    input.focus();
     renderTasks();
   };
 
   const searchInput = document.getElementById("searchInput");
-  searchInput.addEventListener("input", renderTasks);
+
+  const taskInput = document.getElementById("taskInput");
+
+  taskInput.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      window.addTask();
+    }
+  });
 
   window.setFilter = function (type) {
     filter = type;
@@ -320,6 +329,9 @@ if (location.pathname.includes("todo.html")) {
 
       list.appendChild(li);
     });
+    if (list.innerHTML === "") {
+      list.innerHTML = `<p style="text-align:center;color:gray;">No tasks found</p>`;
+    }
   }
 
   window.toggleTask = function (i) {
